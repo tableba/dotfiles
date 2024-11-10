@@ -16,12 +16,29 @@
       "battery", "network", "pulseaudio", "clock"
     ],
 
+  "hyprland/window" : {
+    "format": "˗ˏˋ 𓅰 ˎˊ˗  {}"
+  },
+
+  "network": {
+    // "interface": "wlp2s0",
+    "format-wifi": "({signalStrength}%)  ",
+    "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+    "format-disconnected": "", //An empty format will hide the module.
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50,
+    "on-click": "nm-applet"
+  },
+
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format": "{:%m/%d - %H:%M}",
         "format-alt": "{:%Y-%m-%d}",
         "format-icons": {
-          "clock-icon": ""
+          "clock-icon": " "
         }
     },
 
@@ -32,15 +49,9 @@
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
         "format-source": "{volume}% ",
-        "format-source-muted": "",
+        "format-source-muted": " ",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
+            "default": ["", " ", " "]
         },
         "on-click": "pavucontrol"
     }
