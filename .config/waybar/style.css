@@ -18,11 +18,18 @@ window#waybar {
 }
 
 /* each module */
-#waybar .module:not(#workspaces) {
+#waybar .module:not(#workspaces):not(#window) {
 	background-color: @grey;
   color: @white;
   margin: 0px 3px 0px 3px;
   padding: 0px 4px 0px 4px;
+}
+
+#window {
+  background: radial-gradient(circle, @grey 0%, @dark_grey 80%, @dark_grey_transparent 95%, transparent 100%);
+  color: @white;
+  margin: 0px 3px 0px 3px;
+  padding: 0px 20px 0px 20px;
 }
 
 #workspaces button {
@@ -49,5 +56,5 @@ window#waybar {
 
 #workspaces button.active {
   color: @black;
-  background: @light-grey;
+  background: @light_grey;
 }

@@ -13,20 +13,33 @@
       "hyprland/window"
     ],
     "modules-right": [
-      "battery", "network", "pulseaudio", "clock"
+      "keyboard-state", "hyprland/language", "battery", "network", "pulseaudio", "clock"
     ],
 
   "hyprland/window" : {
     "format": "˗ˏˋ 𓅰 ˎˊ˗  {}"
   },
 
+  "hyprland/language": {
+      "format": "{short} {variant}",
+      "on-click": "hyprctl switchxkblayout current next",
+  },
+
+  "hyprland/keyboard-state": {
+      "device-path": "royuan-akko--keyboard",
+      "capslock": true,
+      "format": {
+          "capslock": "C {icon}"                                                                                                                                                       
+      },
+  },
+
   "network": {
     // "interface": "wlp2s0",
-    "format-wifi": "({signalStrength}%)  ",
-    "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+    "format-wifi": " ",
+    "format-ethernet": "{ipaddr}/{cidr} 󰊗 ",
     "format-disconnected": "", //An empty format will hide the module.
-    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
-    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗 ",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)  ",
     "tooltip-format-ethernet": "{ifname} ",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50,
