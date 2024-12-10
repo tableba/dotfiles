@@ -13,7 +13,7 @@
       "hyprland/window"
     ],
     "modules-right": [
-      "keyboard-state", "hyprland/language", "battery", "network", "pulseaudio", "clock"
+      "keyboard-state", "network", "pulseaudio", "clock"
     ],
 
   "hyprland/window" : {
@@ -25,12 +25,14 @@
       "on-click": "hyprctl switchxkblayout current next",
   },
 
-  "hyprland/keyboard-state": {
-      "device-path": "royuan-akko--keyboard",
+  "keyboard-state": {
       "capslock": true,
-      "format": {
-          "capslock": "C {icon}"                                                                                                                                                       
-      },
+      //"binding-keys": [1,69,70],
+      "format": "{icon}",
+      "format-icons": {
+          "locked": "█",
+          "unlocked": "░"
+      }
   },
 
   "network": {

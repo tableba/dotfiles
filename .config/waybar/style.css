@@ -58,3 +58,14 @@ window#waybar {
   color: @black;
   background: @light_grey;
 }
+
+/* #keyboard-state capslock.locked { */
+/*   color: @black; */
+/*   background: @black; */
+/* } */
+
+#keyboard-state {
+  color: @white;
+	background-color: @white;
+  background: @white;
+}
