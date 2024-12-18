@@ -13,12 +13,16 @@ PS1='[\u@\h \W]\$ '
 export PATH="$HOME/.cargo/bin":$PATH
 export PATH="$HOME/.local/bin":$PATH
 
-
 # dark theme
 export GTK_THEME=Adwaita:dark
 export QT_STYLE_OVERRIDE=Adwaita
 
-
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export SDL_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+

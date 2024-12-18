@@ -17,7 +17,8 @@
     ],
 
   "hyprland/window" : {
-    "format": "˗ˏˋ 𓅰 ˎˊ˗  {}"
+    //"format": "˗ˏˋ 𓅰 ˎˊ˗  {}"
+    "format": "~ {}"
   },
 
   "hyprland/language": {
