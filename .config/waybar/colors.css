@@ -1,0 +1,9 @@
+/* all module */
+@define-color white rgba(240, 240, 240, 0.95);
+@define-color light_grey rgba(150, 150, 150, 0.65);
+@define-color grey rgba(76, 72, 64, 0.48);
+@define-color black rgba(0, 0, 0, 0.9);
+
+/* center module */
+@define-color grey_c rgba(70, 65, 50, 0.6);
+@define-color ligth_grey_c rgba(80, 75, 60, 0.5);

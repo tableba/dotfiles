@@ -1,0 +1,77 @@
+﻿{
+    "layer": "top",
+    "position": "top",
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+
+    "modules-left": [
+	"hyprland/workspaces"
+    ],
+    "modules-center": [
+      "hyprland/window"
+    ],
+    "modules-right": [
+      "network", "pulseaudio", "clock"
+    ],
+
+  "hyprland/window" : {
+    "format": " 𓅰 {}"
+    //"format": "~ {}"
+  },
+
+  "hyprland/language": {
+      "format": "{short} {variant}",
+      "on-click": "hyprctl switchxkblayout current next",
+  },
+
+  "keyboard-state": {
+      "capslock": true,
+      //"binding-keys": [1,69,70],
+      "format": "{icon}",
+      "format-icons": {
+          "locked": "█",
+          "unlocked": "░"
+      }
+  },
+
+  "network": {
+    // "interface": "wlp2s0",
+    "format-wifi": " ",
+    "format-ethernet": "{ipaddr}/{cidr} 󰊗 ",
+    "format-disconnected": "", //An empty format will hide the module.
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗 ",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)  ",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50,
+    "on-click": "nm-applet"
+  },
+
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%m/%d - %H:%M}",
+        "format-alt": "{:%Y-%m-%d}",
+        "format-icons": {
+          "clock-icon": " "
+        }
+    },
+
+    "pulseaudio": {
+        "scroll-step": 5, // %, can be a float
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": " ",
+        "format-icons": {
+            "default": ["", " ", " "]
+        },
+        "on-click": "pavucontrol"
+    }
+
+}
+
+

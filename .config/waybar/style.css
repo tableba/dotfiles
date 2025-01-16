@@ -1,0 +1,71 @@
+@import "colors.css";
+
+* {
+    font-family: JetBrainsMono Nerd Font, Roboto, Helvetica, Arial, sans-serif;
+    /* font-family: "Lucida Console", "Courier New", monospace; */
+    /* font-family: mononoki Nerd Font Mono; */
+    font-size: 13px;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* the whole bar */
+window#waybar {
+    background-color: transparent;
+    /* border-bottom: 1px solid @white_accent; */
+    /* border-radius: 0px; */
+    padding: 0px 5px 0px 5px;
+}
+
+/* each module */
+#waybar .module:not(#workspaces):not(#window) {
+	background-color: @grey;
+  color: @white;
+  margin: 0px 3px 0px 3px;
+  padding: 0px 4px 0px 4px;
+}
+
+#window {
+  background: radial-gradient(circle, @grey_c 0%, @light_grey_c 90%, transparent 100%);
+  color: @white;
+  margin: 0px 3px 0px 3px;
+  padding: 0px 20px 0px 20px;
+}
+
+#workspaces button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -2px transparent;
+    border: none;
+    border-radius: 0px;
+
+    color: @white;
+    background-color: transparent;
+    min-height: 20px;
+    min-width: 10px;
+    margin: 0px;
+    padding: 0px 6px 0px 6px;
+}
+
+#workspaces button:hover {
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -2px @white;
+
+    color: inherit;
+    background: rgba(120, 120, 120, 0.5);
+}
+
+#workspaces button.active {
+  color: @black;
+  background: @light_grey;
+}
+
+/* #keyboard-state capslock.locked { */
+/*   color: @black; */
+/*   background: @black; */
+/* } */
+
+#keyboard-state {
+  color: @white;
+	background-color: @white;
+  background: @white;
+}
