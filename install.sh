@@ -36,8 +36,8 @@ link_files() {
 }
 
 #create .config if it is not already there
-if [ ! -d "$HOME/.configgg" ]; then
-  mkdir "$HOME/.configgg"
+if [ ! -d $TARGET_DIR ]; then
+  mkdir $TARGET_DIR
 fi
 
 # Link individual files
