@@ -15,11 +15,11 @@ export PATH="$HOME/.local/bin":$PATH
 
 # dark theme
 export GTK_THEME=Adwaita:dark
-export QT_STYLE_OVERRIDE=Adwaita
+export QT_QPA_PLATFORMTHEME=qt5ct
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+#export SDKMAN_DIR="$HOME/.sdkman"
+#[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx

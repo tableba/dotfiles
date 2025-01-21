@@ -35,6 +35,10 @@ link_files() {
     fi
 }
 
+#create .config if it is not already there
+if [ ! -d "$HOME/.configgg" ]; then
+  mkdir "$HOME/.configgg"
+fi
 
 # Link individual files
 link_files "$DOTFILES_DIR/.bashrc" "$HOME/.bashrc"
