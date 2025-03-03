@@ -11,11 +11,7 @@
     ],
 //    "modules-center": [
 //      "hyprland/window"
-<<<<<<< HEAD
-//    ],
-=======
 //   ],
->>>>>>> main
     "modules-right": [
       "network", "pulseaudio", "clock", "battery"
     ],
