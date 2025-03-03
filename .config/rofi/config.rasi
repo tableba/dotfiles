@@ -1,0 +1,4 @@
+configuration {
+}
+
+@theme "/home/antoine/.config/rofi/customThemeLight.rasi"
