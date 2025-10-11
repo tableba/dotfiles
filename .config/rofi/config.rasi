@@ -1,4 +1,6 @@
 configuration {
 }
 
-@theme "/home/antoine/.config/rofi/customThemeLight.rasi"
+//@theme "/home/antoine/.config/rofi/customThemeLight.rasi"
+
+@theme "/usr/share/rofi/themes/Monokai.rasi"
