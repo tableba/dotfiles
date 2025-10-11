@@ -35,6 +35,26 @@ link_files() {
     fi
 }
 
+install_rofi() {
+  local target_dir="$1"
+
+  # see if the rofi profiles are already installed
+  if [ -e "$target_dir" ]; then
+    echo "rofi lib already installed"
+  else 
+    git clone --depth=1 https://github.com/adi1090x/rofi.git rofi-lib
+    cd rofi-lib || exit
+    chmod +x setup.sh
+    ./setup.sh
+    cd ..
+    rm -rf rofi-lib
+  fi
+
+}
+
+# clone custom rofi profiles and put it into ~/.config/rofi (not in ~/.dotfiles !)
+install_rofi "$HOME/.config/rofi/launchers"
+
 #create .config if it is not already there
 if [ ! -d $TARGET_DIR ]; then
   mkdir $TARGET_DIR
@@ -52,6 +72,7 @@ for subdir in "$DOTFILES_DIR/.config/"*; do
         link_files "$subdir" "$target_subdir"
     fi
 done
+
 
 echo "Dotfiles installation complete."
 
