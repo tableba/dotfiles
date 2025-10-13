@@ -13,7 +13,7 @@
 //      "hyprland/window"
 //   ],
     "modules-right": [
-      "network", "pulseaudio", "clock"
+      "battery", "network", "pulseaudio", "clock" 
     ],
 
   "hyprland/window" : {
