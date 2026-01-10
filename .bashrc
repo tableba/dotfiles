@@ -13,6 +13,12 @@ PS1='[\u@\h \W]\$ '
 export PATH="$HOME/.cargo/bin":$PATH
 export PATH="$HOME/.local/bin":$PATH
 
+# hadoop
+export HADOOP_HOME=/opt/hadoop
+export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
+export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
+
 # dark theme
 export GTK_THEME=Adwaita:dark
 export QT_QPA_PLATFORMTHEME=qt5ct
@@ -25,4 +31,3 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 export QT_IM_MODULE=fcitx
 export SDL_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
-
