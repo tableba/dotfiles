@@ -1,0 +1,11 @@
+* {
+    /* Gruvbox Dark Colors */
+    bg:        #242424; /* Slightly deeper dark (from #282828) */
+    fg:        #fbf1c7; /* Gruvbox light1 - just a bit brighter than #ebdbb2 */
+    fg-alt:    #bdae93; /* Slightly brighter alternative text */
+    fg-dim:    #665c54; /* Gruvbox dark3 - subtly crisper than #504945 */
+    hl-bg:     #bdae93; /* Matches fg-alt adjustment */
+    hl-fg:     #242424; /* Matches bg adjustment */
+    background-color: @bg;
+    text-color:       @fg-alt;
+}

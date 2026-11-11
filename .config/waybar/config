@@ -9,6 +9,7 @@
     "modules-left": [
 	"hyprland/workspaces"
     ],
+
 //    "modules-center": [
 //      "hyprland/window"
 //   ],

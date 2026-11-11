@@ -1,6 +1,74 @@
 configuration {
+    modi: "drun,run";
+    show-icons: false;
+    font: "monospace 10";
+    display-drun: "探す:";
 }
 
-//@theme "/home/antoine/.config/rofi/customThemeLight.rasi"
+@theme "gruvbox"
 
-@theme "/usr/share/rofi/themes/Monokai.rasi"
+window {
+    width: 25%;
+    border: 1px solid;
+    border-color: #3c3836;
+    padding: 0;
+    background-color: @bg;
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+    spacing: 0;
+}
+
+inputbar {
+    padding: 8px 8px 12px 8px;
+    children: [ prompt, entry, num-filtered-rows, textbox-num-sep, num-rows ];
+    background-color: @bg;
+}
+
+prompt {
+    text-color: @fg-alt;
+    padding: 0 8px 0 0;
+}
+
+entry {
+    placeholder: "Type to filter";
+    placeholder-color: @fg-dim;
+    text-color: @fg-alt;
+}
+
+num-filtered-rows, textbox-num-sep, num-rows {
+    text-color: @fg-dim;
+    expand: false;
+}
+
+textbox-num-sep {
+    str: "/";
+}
+
+listview {
+    lines: 5;
+    spacing: 0;
+    scrollbar: false;
+    border: 0;
+}
+
+element {
+    padding: 4px 8px;
+    children: [ element-text ];
+}
+
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+element normal.normal, element alternate.normal {
+    background-color: @bg;
+    text-color:       @fg-alt;
+}
+
+element selected.normal {
+    background-color: @hl-bg;
+    text-color:       @hl-fg;
+}
